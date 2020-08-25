@@ -5,9 +5,6 @@ import { Vector3 } from 'three';
 import GlobalStyles from '../components/GlobalStyles';
 import Controls from '../components/Controls';
 import Globe from '../components/Globe';
-import House1 from '../components/House1';
-import House2 from '../components/House2';
-import House3 from '../components/House3';
 
 export default () => {
     const [delayRotation, setDelayRotation] = useState(0);
@@ -82,9 +79,6 @@ export default () => {
                     intensity={0.1}
                     position={[10, 6, 5]}
                 />
-                <House1 />
-                <House2 />
-                <House3 />
                 <Globe />
                 <Controls autoRotate={true} delayRotation={delayRotation} />
             </Canvas>

@@ -8,6 +8,8 @@ export default ({
     y = 0,
     z = 0,
     color = 'rgb(230, 230, 230)',
+    textRotation = [Math.PI / 2, 0, 0],
+    textOffset = [0, 0, 0],
     ...props
 }) => {
     return (
@@ -16,6 +18,8 @@ export default ({
             <Text
                 onClick={() => window.appHistory.push(to)}
                 onPointerUp={() => window.appHistory.push(to)}
+                rotation={textRotation}
+                offset={textOffset}
             >
                 {text}
             </Text>

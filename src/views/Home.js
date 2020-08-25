@@ -61,7 +61,7 @@ export default () => {
             <Canvas
                 shadowMap
                 camera={{
-                    position: new Vector3(10, 5, 0)
+                    position: new Vector3(0, 6, 9)
                 }}
             >
                 <ambientLight intensity={0.9} />
@@ -81,9 +81,28 @@ export default () => {
                     position={[10, 6, 5]}
                 />
                 <Globe />
-                <Pin text="Wonder Woman" color="blue" x={0} y={-2} z={5} />
-                <Pin text="HBO" color="red" x={2} y={0} z={5} />
-                <Pin text="Friends" color="yellow" x={0} y={2} z={5} />
+                <Pin
+                    text="HBO"
+                    color="red"
+                    x={3}
+                    y={3}
+                    z={3}
+                    rotation={[-Math.PI / 3, Math.PI / 4, -Math.PI / 4]}
+                />
+                <Pin
+                    text="Wonder Woman"
+                    color="blue"
+                    x={-4}
+                    y={3}
+                    z={2}
+                    rotation={[-Math.PI / 3, -Math.PI / 3.5, Math.PI / 5]}
+                />
+                <Pin
+                    text="Friends"
+                    color="yellow"
+                    y={5}
+                    rotation={[-Math.PI / 2, 0, 0]}
+                />
                 <Controls autoRotate delayRotation={delayRotation} />
             </Canvas>
         </span>

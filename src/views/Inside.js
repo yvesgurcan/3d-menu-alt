@@ -25,9 +25,8 @@ export default () => {
                 render={() => <BackLink to="/">Back</BackLink>}
             />
             <Canvas
-                shadowMap
                 camera={{
-                    position: new Vector3(-35, bottom + 22, 0)
+                    position: new Vector3(-28, bottom + 22, 0)
                 }}
             >
                 <ambientLight intensity={0.5} />
@@ -113,7 +112,13 @@ export default () => {
                     width={5}
                     length={5}
                 />
-                <Controls enableZoom={true} />
+                <Controls
+                    enableZoom={false}
+                    minAzimuthAngle={-Math.PI}
+                    maxAzimuthAngle={0}
+                    minPolarAngle={Math.PI / 2}
+                    maxPolarAngle={-Math.PI / 2}
+                />
             </Canvas>
         </ViewLayer>
     );

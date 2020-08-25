@@ -4,7 +4,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 extend({ OrbitControls });
 
-export default ({ delayRotation, autoRotate = false, ...props }) => {
+export default ({ autoRotate = false, delayRotation, ...props }) => {
     const elementReference = useRef();
     const { camera, gl } = useThree();
     useFrame(() => {
@@ -18,13 +18,13 @@ export default ({ delayRotation, autoRotate = false, ...props }) => {
 
     return (
         <orbitControls
-            enabled={true}
-            autoRotate={autoRotate}
+            enabled
+            enableDamping
             ref={elementReference}
             args={[camera, gl.domElement]}
-            enableDamping
-            dampingFactor={0.1}
             rotateSpeed={0.5}
+            dampingFactor={1}
+            autoRotate={autoRotate}
             {...props}
         />
     );

@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 
 import Home from './views/Home';
 import Inside from './views/Inside';
-import Menu1 from './views/Menu1';
-import Menu2 from './views/Menu2';
 import PinModal from './views/PinModal';
 
 const rootElement = document.getElementById('root');
@@ -21,11 +19,7 @@ ReactDOM.render(
                 return <Home />;
             }}
         />
-        <Switch>
-            <Route path="/inside" component={Inside} />
-            <Route path="/menu1" component={Menu1} />
-            <Route path="/menu2" component={Menu2} />
-        </Switch>
+        <Route path="/inside" component={Inside} />
         <Route path="/inside/pin1" render={() => <PinModal text="1" />} />
         <Route path="/inside/pin2" render={() => <PinModal text="2" />} />
         <Route path="/inside/pin3" render={() => <PinModal text="3" />} />

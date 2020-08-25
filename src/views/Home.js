@@ -5,6 +5,7 @@ import { Vector3 } from 'three';
 import GlobalStyles from '../components/GlobalStyles';
 import Controls from '../components/Controls';
 import Globe from '../components/Globe';
+import Pin from '../components/GlobePin';
 
 export default () => {
     const [delayRotation, setDelayRotation] = useState(0);
@@ -60,7 +61,7 @@ export default () => {
             <Canvas
                 shadowMap
                 camera={{
-                    position: new Vector3(-10, 0, 0)
+                    position: new Vector3(10, 5, 0)
                 }}
             >
                 <ambientLight intensity={0.9} />
@@ -80,7 +81,10 @@ export default () => {
                     position={[10, 6, 5]}
                 />
                 <Globe />
-                <Controls autoRotate={true} delayRotation={delayRotation} />
+                <Pin text="Wonder Woman" color="blue" x={0} y={-2} z={5} />
+                <Pin text="HBO" color="red" x={2} y={0} z={5} />
+                <Pin text="Friends" color="yellow" x={0} y={2} z={5} />
+                <Controls autoRotate delayRotation={delayRotation} />
             </Canvas>
         </span>
     );

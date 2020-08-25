@@ -89,6 +89,12 @@ export default () => {
                     y={3}
                     z={3}
                     rotation={[-Math.PI / 3, Math.PI / 4, -Math.PI / 4]}
+                    blockProps={{
+                        z: 0.8,
+                        depth: 1,
+                        length: 0.6,
+                        width: 0.01
+                    }}
                 />
                 <Pin
                     text="Wonder Woman"
@@ -97,6 +103,14 @@ export default () => {
                     y={3}
                     z={2}
                     rotation={[-Math.PI / 3, -Math.PI / 3.5, Math.PI / 5]}
+                    blockProps={{
+                        x: 0,
+                        y: 0,
+                        z: 0.8,
+                        depth: 2.5,
+                        length: 0.6,
+                        width: 0.01
+                    }}
                 />
                 <Pin
                     to="/menu2"
@@ -104,6 +118,14 @@ export default () => {
                     color="yellow"
                     y={5}
                     rotation={[-Math.PI / 2, 0, 0]}
+                    blockProps={{
+                        x: 0,
+                        y: 0,
+                        z: 0.8,
+                        depth: 2.5,
+                        length: 0.6,
+                        width: 0.01
+                    }}
                 />
                 <Controls autoRotate delayRotation={delayRotation} />
             </Canvas>

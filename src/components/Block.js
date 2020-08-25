@@ -8,7 +8,7 @@ export default ({
     length = 0,
     width = 0,
     depth = 0,
-    props
+    ...props
 }) => {
     return (
         <mesh position={[0 + x, 0 + y, 0 + z]} {...props}>

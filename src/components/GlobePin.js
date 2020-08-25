@@ -1,5 +1,6 @@
 import React from 'react';
 import Text from './Text';
+import Block from './Block';
 
 export default ({
     text = '',
@@ -10,6 +11,7 @@ export default ({
     color = 'rgb(230, 230, 230)',
     textRotation = [Math.PI / 2, 0, 0],
     textOffset = [0, 0, 0],
+    blockProps = {},
     ...props
 }) => {
     return (
@@ -23,6 +25,11 @@ export default ({
             >
                 {text}
             </Text>
+            <Block
+                {...blockProps}
+                onClick={() => window.appHistory.push(to)}
+                onPointerUp={() => window.appHistory.push(to)}
+            />
             <meshStandardMaterial
                 attach="material"
                 color={color}

@@ -34,7 +34,7 @@ export default () => {
                     position={[10, 5, 0]}
                 />
                 <Wall
-                    color="rgb(0, 0, 205)"
+                    color="rgb(0, 168, 224)"
                     x={-60}
                     y={0}
                     z={0}
@@ -42,7 +42,7 @@ export default () => {
                     width={30}
                 />
                 <Wall
-                    color="rgb(0, 0, 205)"
+                    color="rgb(0, 168, 224)"
                     x={60}
                     y={0}
                     z={0}
@@ -50,7 +50,7 @@ export default () => {
                     width={30}
                 />
                 <Wall
-                    color="rgb(0, 0, 205)"
+                    color="rgb(0, 168, 224)"
                     x={0}
                     y={15}
                     z={0}
@@ -58,7 +58,7 @@ export default () => {
                     depth={120}
                 />
                 <Wall
-                    color="rgb(0, 0, 205)"
+                    color="rgb(0, 168, 224)"
                     x={0}
                     y={-15}
                     z={0}
@@ -66,7 +66,7 @@ export default () => {
                     depth={120}
                 />
                 <Wall
-                    color="rgb(0, 0, 205)"
+                    color="rgb(0, 168, 224)"
                     x={0}
                     y={0}
                     z={35}
@@ -74,7 +74,7 @@ export default () => {
                     width={30}
                 />
                 <Wall
-                    color="rgb(0, 0, 205)"
+                    color="rgb(0, 168, 224)"
                     x={0}
                     y={0}
                     z={-35}

@@ -82,6 +82,7 @@ export default () => {
                 />
                 <Globe />
                 <Pin
+                    to="/menu1"
                     text="HBO"
                     color="red"
                     x={3}
@@ -98,6 +99,7 @@ export default () => {
                     rotation={[-Math.PI / 3, -Math.PI / 3.5, Math.PI / 5]}
                 />
                 <Pin
+                    to="/menu2"
                     text="Friends"
                     color="yellow"
                     y={5}

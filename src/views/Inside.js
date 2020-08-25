@@ -14,6 +14,9 @@ const Wall = Block;
 const Pedestal = Block;
 
 export default () => {
+    const size1 = 120;
+    const size2 = 120;
+    const bottom = -27;
     return (
         <ViewLayer backgroundColor="rgb(140, 140, 255)" zIndex={600}>
             <Route
@@ -24,7 +27,7 @@ export default () => {
             <Canvas
                 shadowMap
                 camera={{
-                    position: new Vector3(-10, 0, 0)
+                    position: new Vector3(-35, bottom + 22, 0)
                 }}
             >
                 <ambientLight intensity={0.5} />
@@ -35,59 +38,58 @@ export default () => {
                 />
                 <Wall
                     color="rgb(0, 168, 224)"
-                    x={-60}
+                    x={-size1}
                     y={0}
                     z={0}
-                    length={70}
-                    width={30}
+                    length={size2}
+                    width={size1 / 2}
                 />
                 <Wall
                     color="rgb(0, 168, 224)"
-                    x={60}
+                    x={size1}
                     y={0}
                     z={0}
-                    length={70}
-                    width={30}
+                    length={size2}
+                    width={size1 / 2}
                 />
                 <Wall
                     color="rgb(0, 168, 224)"
                     x={0}
-                    y={15}
+                    y={size1 / 4}
                     z={0}
-                    length={70}
-                    depth={120}
+                    length={size2}
+                    depth={size1 * 2}
                 />
                 <Wall
                     color="rgb(0, 168, 224)"
                     x={0}
-                    y={-15}
+                    y={-size1 / 4}
                     z={0}
-                    length={70}
-                    depth={120}
-                />
-                <Wall
-                    color="rgb(0, 168, 224)"
-                    x={0}
-                    y={0}
-                    z={35}
-                    depth={120}
-                    width={30}
+                    length={size2}
+                    depth={size1 * 2}
                 />
                 <Wall
                     color="rgb(0, 168, 224)"
                     x={0}
                     y={0}
-                    z={-35}
-                    depth={120}
-                    width={30}
+                    z={size2 / 2}
+                    depth={size1 * 2}
+                    width={size1 / 2}
                 />
-                <Pointer to="/inside/pin1" x={10} y={-10} z={-10} />
-                <Pointer to="/inside/pin2" x={40} y={-10} z={5} />
-                <Pointer to="/inside/pin3" x={-40} y={-10} z={-10} />
+                <Wall
+                    color="rgb(0, 168, 224)"
+                    x={0}
+                    y={0}
+                    z={-size2 / 2}
+                    depth={size1 * 2}
+                    width={size1 / 2}
+                />
+                <Pointer to="/inside/pin1" x={23} y={bottom} z={-18} />
+                <Pointer to="/inside/pin2" x={40} y={bottom} z={5} />
                 <Pedestal
                     color="rgb(50, 50, 50)"
                     x={30}
-                    y={-12}
+                    y={bottom}
                     z={-10}
                     depth={5}
                     width={5}
@@ -96,7 +98,7 @@ export default () => {
                 <Pedestal
                     color="rgb(50, 50, 50)"
                     x={35}
-                    y={-12}
+                    y={bottom}
                     z={0}
                     depth={5}
                     width={5}
@@ -105,40 +107,13 @@ export default () => {
                 <Pedestal
                     color="rgb(50, 50, 50)"
                     x={30}
-                    y={-12}
+                    y={bottom}
                     z={10}
                     depth={5}
                     width={5}
                     length={5}
                 />
-                <Pedestal
-                    color="rgb(50, 50, 50)"
-                    x={-30}
-                    y={-12}
-                    z={-10}
-                    depth={5}
-                    width={5}
-                    length={5}
-                />
-                <Pedestal
-                    color="rgb(50, 50, 50)"
-                    x={-35}
-                    y={-12}
-                    z={0}
-                    depth={5}
-                    width={5}
-                    length={5}
-                />
-                <Pedestal
-                    color="rgb(50, 50, 50)"
-                    x={-30}
-                    y={-12}
-                    z={10}
-                    depth={5}
-                    width={5}
-                    length={5}
-                />
-                <Controls enableZoom={false} />
+                <Controls enableZoom={true} />
             </Canvas>
         </ViewLayer>
     );

@@ -11,14 +11,14 @@ export default ({
     ...props
 }) => {
     return (
-        <mesh
-            onClick={() => window.appHistory.push(to)}
-            onPointerUp={() => window.appHistory.push(to)}
-            position={[0 + x, 0 + y, 0 + z]}
-            {...props}
-        >
+        <mesh position={[0 + x, 0 + y, 0 + z]} {...props}>
             <boxBufferGeometry attach="geometry" args={[0.025, 0.025, 1]} />{' '}
-            <Text>{text}</Text>
+            <Text
+                onClick={() => window.appHistory.push(to)}
+                onPointerUp={() => window.appHistory.push(to)}
+            >
+                {text}
+            </Text>
             <meshStandardMaterial
                 attach="material"
                 color={color}

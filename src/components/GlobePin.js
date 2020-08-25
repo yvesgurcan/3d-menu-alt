@@ -12,6 +12,7 @@ export default ({
     textRotation = [Math.PI / 2, 0, 0],
     textOffset = [0, 0, 0],
     blockProps = {},
+    opacity,
     ...props
 }) => {
     return (
@@ -27,6 +28,7 @@ export default ({
             </Text>
             <Block
                 {...blockProps}
+                opacity={opacity}
                 onClick={() => window.appHistory.push(to)}
                 onPointerUp={() => window.appHistory.push(to)}
             />

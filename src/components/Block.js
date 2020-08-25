@@ -8,6 +8,7 @@ export default ({
     length = 0,
     width = 0,
     depth = 0,
+    opacity = 1,
     ...props
 }) => {
     return (
@@ -16,10 +17,12 @@ export default ({
                 attach="geometry"
                 args={[depth, width, length]}
             />
-            <meshStandardMaterial
+            <meshPhongMaterial
                 attach="material"
                 color={color}
                 roughness={0.5}
+                opacity={opacity}
+                transparent={opacity !== 0}
             />
         </mesh>
     );

@@ -95,6 +95,7 @@ export default () => {
                         length: 0.6,
                         width: 0.01
                     }}
+                    opacity={0.5}
                 />
                 <Pin
                     text="Wonder Woman"
@@ -107,10 +108,11 @@ export default () => {
                         x: 0,
                         y: 0,
                         z: 0.8,
-                        depth: 2.5,
+                        depth: 2.6,
                         length: 0.6,
                         width: 0.01
                     }}
+                    opacity={0.5}
                 />
                 <Pin
                     to="/menu2"
@@ -122,10 +124,11 @@ export default () => {
                         x: 0,
                         y: 0,
                         z: 0.8,
-                        depth: 2.5,
+                        depth: 1.5,
                         length: 0.6,
                         width: 0.01
                     }}
+                    opacity={0.5}
                 />
                 <Controls autoRotate delayRotation={delayRotation} />
             </Canvas>
